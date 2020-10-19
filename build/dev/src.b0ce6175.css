@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito|Roboto+Slab");
+
+:root {
+  --dark: #333333;
+  --primary: #3e6ef3;
+  --secondary: #f13a6e;
+  --text-primary: #f6f6f6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--dark);
+  color: var(--text-primary);
+
+  font-family: "Nunito";
+}
+
+
+/*# sourceMappingURL=/src.b0ce6175.css.map */
