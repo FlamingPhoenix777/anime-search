@@ -28285,7 +28285,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"../src/App.jsx":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"../src/components/Navbar.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28297,15 +28297,71 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var Navbar = function Navbar() {
+  return /*#__PURE__*/_react.default.createElement("nav", {
+    className: "navbar"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "brand_logo"
+  }, "AnimeSearch"));
+};
+
+var _default = Navbar;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"../src/components/SearchBox.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SearchBox = function SearchBox() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "search"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "search__text__container"
+  }, /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "search__text",
+    placeholder: "e.g. Try 'Naruto'"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "search__button__container"
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    className: "search__button"
+  }, "search")));
+};
+
+var _default = SearchBox;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"../src/App.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Navbar = _interopRequireDefault(require("./components/Navbar"));
+
+var _SearchBox = _interopRequireDefault(require("./components/SearchBox"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var App = function App() {
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "App"
-  }, "Hello World");
+  }, /*#__PURE__*/_react.default.createElement(_Navbar.default, null), /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement(_SearchBox.default, null)));
 };
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./components/Navbar":"../src/components/Navbar.jsx","./components/SearchBox":"../src/components/SearchBox.jsx"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -28423,7 +28479,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "2262" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "2399" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

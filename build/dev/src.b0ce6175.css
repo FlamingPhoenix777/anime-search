@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito|Roboto+Slab");
+@import url("https://fonts.googleapis.com/css?family=Nunito|Roboto+Slab|Material+Icons");
 
 :root {
   --dark: #333333;
   --primary: #3e6ef3;
-  --secondary: #f13a6e;
+  --secondary: #e93d6e;
   --text-primary: #f6f6f6;
 }
 
@@ -15,6 +15,97 @@ body {
   color: var(--text-primary);
 
   font-family: "Nunito";
+}
+
+/* Navbar */
+nav.navbar {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  padding: 0.8rem;
+  margin-bottom: 50px;
+
+  background-color: var(--primary);
+}
+
+nav.navbar .brand_logo {
+  font-family: "Roboto Slab";
+  font-weight: 600;
+  font-size: 2.1rem;
+}
+
+/* Search */
+.search {
+  width: 50%;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.search .search__text__container {
+  display: flex;
+  flex: 9;
+  justify-content: center;
+}
+
+.search__button__container {
+  display: flex;
+  flex: 1;
+}
+
+#search__text {
+  height: 4rem;
+  width: 60%;
+
+  padding: 10px;
+
+  background-color: #272727;
+  color: var(--text-primary);
+
+  font-family: "Nunito";
+  font-size: 20px;
+
+  border-radius: 7px;
+  border: none;
+  outline: none;
+
+  box-shadow: 0 0 8px #222222;
+
+  transition-duration: 200ms;
+}
+
+#search__text:focus {
+  box-shadow: 0 0 16px #222222;
+}
+
+.search__button {
+  height: 60px;
+  width: 60px;
+
+  border: none;
+  outline: none;
+  border-radius: 50%;
+
+  background-color: var(--text-primary);
+  color: var(--secondary);
+
+  box-shadow: 0 0 8px #222222;
+
+  font-family: "Material Icons";
+  font-size: 2.3rem;
+
+  transition-duration: 200ms;
+}
+
+.search__button:hover {
+  background-color: var(--secondary);
+  color: var(--text-primary);
+
+  box-shadow: 0 0 15px #222222;
 }
 
 
