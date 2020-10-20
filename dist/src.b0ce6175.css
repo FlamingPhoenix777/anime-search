@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito|Roboto+Slab|Orbitron");
+
+:root {
+  --dark: #333333;
+  --primary: #3e6ef3;
+  --secondary: #e93d6e;
+  --text-primary: #f6f6f6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--dark);
+  color: var(--text-primary);
+
+  font-family: "Nunito";
+}
+
+/* Navbar */
+nav.navbar {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  padding: 0.8rem;
+  margin-bottom: 50px;
+
+  background-color: var(--primary);
+
+  box-shadow: 2px 0 8px #1a1a1a;
+}
+
+nav.navbar .brand_logo {
+  font-family: "Roboto Slab";
+  font-weight: 600;
+  font-size: 2.1rem;
+}
+
+/* Search */
+.search {
+  width: 50%;
+
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.search .search__text__container {
+  display: flex;
+  flex: 9;
+  justify-content: center;
+}
+
+.search__button__container {
+  display: flex;
+  flex: 1;
+}
+
+#search__text {
+  height: 4rem;
+  width: 100%;
+
+  padding: 0 18px;
+
+  background-color: #272727;
+  color: var(--text-primary);
+
+  font-family: "Nunito";
+  font-size: 20px;
+
+  border-radius: 7px;
+  border: none;
+  outline: none;
+
+  box-shadow: 0 0 8px #222222;
+
+  transition-duration: 200ms;
+}
+
+#search__text:focus {
+  box-shadow: 0 0 16px #222222;
+}
+
+/* Results */
+.results {
+  padding: 0 3rem;
+}
+
+.results__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.anime__card {
+  display: flex;
+  overflow: hidden;
+  align-self: stretch;
+  background-color: var(--dark);
+  border-radius: 8px;
+  box-shadow: 1px 1px 8px #1a1a1a;
+}
+
+.card__header {
+  flex: 3;
+  object-fit: cover;
+
+  margin-right: 16px;
+}
+
+.card__content {
+  flex: 5;
+  padding: 1rem 0.3rem;
+}
+
+.card__title {
+  font-family: "Roboto Slab";
+  font-size: 1.4rem;
+  color: var(--secondary);
+}
+
+.card__title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.anime__rating {
+  font-size: 1.2rem;
+  font-family: Orbitron;
+  letter-spacing: 0.15rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1400px) {
+  .results__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .anime__card {
+    display: block;
+  }
+
+  .card__header img {
+    width: 100%;
+  }
+
+  .card__content {
+    padding: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .search {
+    width: 90%;
+    padding: 0;
+  }
+
+  .results__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/*# sourceMappingURL=/src.b0ce6175.css.map */
