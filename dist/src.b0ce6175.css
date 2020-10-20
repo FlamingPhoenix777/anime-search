@@ -161,6 +161,10 @@ nav.navbar .brand_logo {
     padding: 0;
   }
 
+  .results {
+    padding: 0 1rem;
+  }
+
   .results__grid {
     grid-template-columns: 1fr;
   }
