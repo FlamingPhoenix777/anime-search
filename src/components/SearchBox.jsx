@@ -1,14 +1,15 @@
-import React from "react";
+import * as React from "react";
 
-const SearchBox = () => {
+const SearchBox = ({ handleChange }) => {
   return (
     <div className="search">
       <div className="search__text__container">
-        <input type="text" id="search__text" placeholder="e.g. Try 'Naruto'" />
-      </div>
-
-      <div className="search__button__container">
-        <button className="search__button">search</button>
+        <input
+          type="text"
+          id="search__text"
+          placeholder="e.g. Try 'Naruto'"
+          onChange={handleChange}
+        />
       </div>
     </div>
   );
