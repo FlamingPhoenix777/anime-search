@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito|Roboto+Slab|Material+Icons");
+@import url("https://fonts.googleapis.com/css?family=Nunito|Roboto+Slab|Orbitron");
 
 :root {
   --dark: #333333;
@@ -27,6 +27,8 @@ nav.navbar {
   margin-bottom: 50px;
 
   background-color: var(--primary);
+
+  box-shadow: 2px 0 8px #1a1a1a;
 }
 
 nav.navbar .brand_logo {
@@ -40,6 +42,7 @@ nav.navbar .brand_logo {
   width: 50%;
 
   margin: 0 auto;
+  margin-bottom: 40px;
 
   display: flex;
   align-content: center;
@@ -59,7 +62,7 @@ nav.navbar .brand_logo {
 
 #search__text {
   height: 4rem;
-  width: 60%;
+  width: 100%;
 
   padding: 0 18px;
 
@@ -82,28 +85,83 @@ nav.navbar .brand_logo {
   box-shadow: 0 0 16px #222222;
 }
 
-.search__button {
-  height: 60px;
-  width: 60px;
-
-  border: none;
-  outline: none;
-  border-radius: 50%;
-
-  background-color: var(--text-primary);
-  color: var(--secondary);
-
-  box-shadow: 0 0 8px #222222;
-
-  font-family: "Material Icons";
-  font-size: 2.3rem;
-
-  transition-duration: 200ms;
+/* Results */
+.results {
+  padding: 0 3rem;
 }
 
-.search__button:hover {
-  background-color: var(--secondary);
-  color: var(--text-primary);
+.results__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
 
-  box-shadow: 0 0 15px #222222;
+.anime__card {
+  display: flex;
+  overflow: hidden;
+  align-self: stretch;
+  background-color: var(--dark);
+  border-radius: 8px;
+  box-shadow: 1px 1px 8px #1a1a1a;
+}
+
+.card__header {
+  flex: 3;
+  object-fit: cover;
+
+  margin-right: 16px;
+}
+
+.card__content {
+  flex: 5;
+  padding: 1rem 0.3rem;
+}
+
+.card__title {
+  font-family: "Roboto Slab";
+  font-size: 1.4rem;
+  color: var(--secondary);
+}
+
+.card__title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.anime__rating {
+  font-size: 1.2rem;
+  font-family: Orbitron;
+  letter-spacing: 0.15rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1400px) {
+  .results__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .anime__card {
+    display: block;
+  }
+
+  .card__header img {
+    width: 100%;
+  }
+
+  .card__content {
+    padding: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .search {
+    width: 90%;
+    padding: 0;
+  }
+
+  .results__grid {
+    grid-template-columns: 1fr;
+  }
 }
