@@ -61,7 +61,7 @@ nav.navbar .brand_logo {
   height: 4rem;
   width: 60%;
 
-  padding: 10px;
+  padding: 0 18px;
 
   background-color: #272727;
   color: var(--text-primary);
