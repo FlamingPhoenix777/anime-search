@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AnimeCard from "./AnimeCard";
+import Kakashi from "../img/kakashi.png";
 
 const Results = ({ query, anime: animeList }) => {
   return (
@@ -11,7 +12,12 @@ const Results = ({ query, anime: animeList }) => {
           ))}
         </div>
       ) : (
-        <p>Nothing here</p>
+        <div className="placeholder">
+          <img src={Kakashi} alt="Kakashi" className="kakashi" />
+          <div className="message">
+            Stop staring, go search for some anime in the searchbar
+          </div>
+        </div>
       )}
     </div>
   );
