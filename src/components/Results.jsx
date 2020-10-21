@@ -3,22 +3,20 @@ import AnimeCard from "./AnimeCard";
 import Kakashi from "../img/kakashi.png";
 
 const Results = ({ query, anime: animeList }) => {
-  return (
+  return animeList ? (
     <div className="results">
-      {animeList ? (
-        <div className="results__grid">
-          {animeList.map((anime) => (
-            <AnimeCard anime={anime} />
-          ))}
-        </div>
-      ) : (
-        <div className="placeholder">
-          <img src={Kakashi} alt="Kakashi" className="kakashi" />
-          <div className="message">
-            Stop staring, go search for some anime in the searchbar
-          </div>
-        </div>
-      )}
+      <div className="results__grid">
+        {animeList.map((anime) => (
+          <AnimeCard anime={anime} key={anime.mal_id} />
+        ))}
+      </div>
+    </div>
+  ) : (
+    <div className="placeholder">
+      <img src={Kakashi} alt="Kakashi" className="kakashi" />
+      <div className="message">
+        Stop staring, go search for some anime in the searchbar
+      </div>
     </div>
   );
 };

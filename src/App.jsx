@@ -12,7 +12,6 @@ const App = () => {
   };
 
   useEffect(() => {
-    console.log(query);
     fetch(`https://api.jikan.moe/v3/search/anime?q=${query}`)
       .then((res) => res.json())
       .then((data) => {
