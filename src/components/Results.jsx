@@ -3,6 +3,10 @@ import AnimeCard from "./AnimeCard";
 import Kakashi from "../img/kakashi.png";
 
 const Results = ({ query, anime: animeList }) => {
+  // Filter NSFW Anime
+  // if (animeList)
+  //   animeList = animeList.filter((anime) => !anime.rated?.startsWith("R"));
+
   return animeList ? (
     <div className="results">
       <div className="results__grid">

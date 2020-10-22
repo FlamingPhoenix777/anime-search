@@ -12,6 +12,7 @@ const AnimeCard = ({ anime }) => {
         </div>
         <div className="anime__info">
           <div className="anime__rating">
+            <span className="anime__rated">{anime.rated}</span>
             <b>{anime.score}</b> / 10
           </div>
           <div className="anime__summary">{anime.synopsis}</div>
