@@ -100,7 +100,7 @@ nav.navbar .brand_logo {
 .placeholder .message {
   font-size: 1.4rem;
   width: 80%;
-  margin: 0 auto;
+  text-align: center;
 }
 
 /* Results */
